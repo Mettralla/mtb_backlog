@@ -1,0 +1,1457 @@
+[
+  {
+      "id": 1,
+      "title": "Barra de Búsqueda",
+      "position": "En la parte superior de la página.",
+      "isCompleted": false,
+      "elements": [
+          {
+              "element_name": "Logo",
+              "element_desc": "Situado en el extremo izquierdo, redirige al usuario a la página de inicio (Home) al hacer clic.",
+              "functional": [
+                  "Al hacer clic en el logo, el usuario debe ser redirigido a la página de inicio (Home)."
+              ],
+              "aceptation": [
+                  "El logo es visible en el extremo izquierdo de la barra superior.",
+                  "Al hacer clic, se redirige correctamente al Home."
+              ]
+          },
+          {
+              "element_name": "Barra de Búsqueda",
+              "element_desc": "Ubicada en el centro, permite al usuario buscar proyectos.",
+              "functional": [
+                  "Permite al usuario buscar proyectos por nombre, descripción, o etiquetas.",
+                  "Debe soportar búsqueda en tiempo real/autocompletado."
+              ],
+              "aceptation": [
+                  "La barra de búsqueda está centrada en la barra superior.",
+                  "El usuario puede escribir en la barra y ver sugerencias mientras escribe.",
+                  "Al presionar Enter o seleccionar una sugerencia, el usuario es redirigido a la página de resultados de búsqueda."
+              ]
+          },
+          {
+              "element_name": "Avatar",
+              "element_desc": "Situado en el extremo derecho, muestra el avatar del usuario y, al hacer clic, despliega un menú contextual.",
+              "functional": [
+                  "El avatar muestra la imagen de perfil del usuario.",
+                  "Al hacer clic en el avatar, se despliega un menú con las siguientes opciones: Username, Email, Configurar, Cerrar Sesión."
+              ],
+              "aceptation": [
+                  "El avatar está visible en el extremo derecho de la barra superior.",
+                  "Al hacer clic en el avatar, el menú se despliega correctamente.",
+                  "El menú se cierra al hacer clic fuera de él o al seleccionar una opción.",
+                  "Las opciones de configuración y cierre de sesión funcionan correctamente."
+              ]
+          },
+          {
+            "element_name": "[Pagina de Proyecto] Titulo de Proyecto",
+            "element_desc": "Reemplaza la barra de búsqueda por el nombre del proyecto cuando se está dentro de un proyecto.",
+            "functional": [
+              "El nombre del proyecto se muestra en el centro en lugar de la barra de búsqueda.",
+              "El usuario puede editar el nombre del proyecto directamente desde la barra."
+            ],
+            "aceptation": [
+              "El nombre del proyecto se muestra en lugar de la barra de búsqueda cuando se está dentro de un proyecto.",
+              "El usuario puede hacer clic en el nombre del proyecto y editarlo, y los cambios se guardan correctamente."
+            ]
+          },
+          {
+            "element_name": "[Pagina de Proyecto] Contador de Envios",
+            "element_desc": "Muestra la cantidad de envíos a la izquierda del avatar cuando se está dentro de un proyecto.",
+            "functional": [
+              "Muestra la cantidad de envíos realizados en el proyecto actual, por ejemplo, '12 envíos'."
+            ],
+            "aceptation": [
+              "El contador de envíos aparece correctamente a la izquierda del avatar cuando se está dentro de un proyecto.",
+              "El número de envíos es preciso y se actualiza correctamente."
+            ]
+          }
+      ],
+      "description": "Barra superior del home",
+      "images": [
+        "../captures/01b_barraBusqueda.jpg",
+        "../captures/01c_barraBusqueda.jpg",
+        "../captures/01d_barraBusqueda.png",
+        "../captures/01e_barraBusqueda.png"
+      ]
+  },
+  {
+    "id": 2,
+    "title": "Menu Vertical",
+    "position": "Debajo del navbar, ocupa 1/5 del ancho y está a la izquierda.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Botón 'Nuevo'",
+        "element_desc": "Botón que abre un menú modal de creación de proyecto.",
+        "functional": [
+          "Al hacer clic en el botón 'Nuevo', se abre un menú modal para crear un nuevo proyecto."
+        ],
+        "aceptation": [
+          "El botón 'Nuevo' es visible y accesible en la parte superior del menú.",
+          "Al hacer clic, el menú modal de creación de proyecto se despliega correctamente."
+        ]
+      },
+      {
+        "element_name": "Opciones de Filtrado",
+        "element_desc": "Tres opciones para filtrar proyectos: Implementado, Borrador, Archivado.",
+        "functional": [
+          "Cada opción tiene un icono a la izquierda y el número de proyectos en esa categoría a la derecha.",
+          "Al hacer clic en una opción, se despliegan los nombres de los proyectos en esa categoría.",
+          "Al hacer clic de nuevo, los nombres de los proyectos se esconden."
+        ],
+        "aceptation": [
+          "Las opciones de filtrado son visibles debajo del botón 'Nuevo'.",
+          "El icono y el número de proyectos están correctamente alineados con cada opción.",
+          "Al hacer clic en una opción, los nombres de los proyectos se despliegan o esconden según corresponda."
+        ]
+      }
+    ],
+    "description": "Menú vertical de navegación que permite crear nuevos proyectos y filtrar los proyectos existentes.",
+    "images": [
+      "../captures/02a_menuVertical.jpg",
+      "../captures/02b_menuVertical.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Lista de Proyecto",
+    "position": "Debajo del navbar, ocupa 4/5 del ancho y está ubicado a la derecha del menú vertical.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Header de la Lista",
+        "element_desc": "Contiene el título 'Mis Proyectos' y botones para filtrar y seleccionar campos. También tiene iconos para archivar, compartir y eliminar.",
+        "functional": [
+          "El título 'Mis Proyectos' está situado en el extremo izquierdo del header.",
+          "El botón 'Filtrar' abre un modal para filtrar la tabla de proyectos.",
+          "El botón 'Campos' abre un modal para seleccionar qué campos se muestran en la lista de proyectos.",
+          "Los iconos de archivar, compartir y eliminar están desactivados por defecto y se activan cuando se selecciona un proyecto."
+        ],
+        "aceptation": [
+          "El título 'Mis Proyectos' es visible en el extremo izquierdo del header.",
+          "Al hacer clic en 'Filtrar', se abre un modal de filtrado.",
+          "Al hacer clic en 'Campos', se abre un modal para seleccionar los campos visibles.",
+          "Los iconos de archivar, compartir y eliminar permanecen desactivados hasta que se selecciona un proyecto."
+        ]
+      },
+      {
+        "element_name": "Cuerpo de la Lista",
+        "element_desc": "Contiene la lista de proyectos, dividida en HeaderList y ItemList.",
+        "functional": [
+          "El HeaderList contiene los siguientes campos: Nombre del Proyecto, Descripción, Estado, Propietario, Fecha de modificación, Fecha de implementación, Sector, Envíos.",
+          "El ItemList muestra los valores de cada proyecto, con un checkbox en cada fila para seleccionar proyectos.",
+          "Al seleccionar un proyecto, se activan las funcionalidades de archivar, compartir y eliminar."
+        ],
+        "aceptation": [
+          "El HeaderList es visible con todos los campos disponibles.",
+          "El ItemList muestra correctamente los valores de cada proyecto.",
+          "Los checkboxes en cada fila permiten seleccionar proyectos, activando las funcionalidades correspondientes en el header."
+        ]
+      }
+    ],
+    "description": "Componente que muestra la lista de proyectos con opciones de filtrado, selección de campos, y funcionalidades de archivo, compartir y eliminación.",
+    "images": [
+      "../captures/03a_listaProyecto.jpg",
+      "../captures/03b_listaProyecto.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Modal Filtro de Tablas",
+    "position": "Aparece en el centro de la página al presionar el botón 'Filtrar' en el componente Lista de Proyectos.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Header",
+        "element_desc": "Contiene el título 'Filtro de Tabla' y una 'X' para cerrar la ventana.",
+        "functional": [
+          "El título 'Filtro de Tabla' se muestra a la izquierda.",
+          "La 'X' en el extremo derecho cierra la ventana modal al hacer clic."
+        ],
+        "aceptation": [
+          "El título 'Filtro de Tabla' es visible y está alineado a la izquierda en el header.",
+          "La 'X' cierra correctamente la ventana modal al ser presionada."
+        ]
+      },
+      {
+        "element_name": "Body",
+        "element_desc": "Contiene cuatro inputs para filtrar la tabla de proyectos.",
+        "functional": [
+          "El input 'Filtrar por' es un selector que permite elegir los campos a filtrar.",
+          "El input 'Condición' es un selector que ofrece las siguientes opciones: Contiene, No Contiene, Es, No es, Empieza con, Finaliza con.",
+          "El input 'Valor' permite al usuario ingresar el valor a buscar.",
+          "Un icono de eliminar filtro permite quitar un filtro aplicado."
+        ],
+        "aceptation": [
+          "El selector 'Filtrar por' muestra correctamente los campos disponibles para filtrar.",
+          "El selector 'Condición' despliega y selecciona correctamente las opciones dadas.",
+          "El input 'Valor' acepta y muestra correctamente el texto ingresado.",
+          "El icono de eliminar filtro elimina correctamente la fila de inputs cuando se presiona."
+        ]
+      },
+      {
+        "element_name": "Footer",
+        "element_desc": "Contiene los botones para gestionar los filtros aplicados.",
+        "functional": [
+          "El botón 'Añadir filtro' añade una nueva fila de inputs para aplicar otro filtro.",
+          "El botón 'Restablecer' borra todos los filtros aplicados.",
+          "El botón 'Aplicar' aplica los filtros a la lista de proyectos."
+        ],
+        "aceptation": [
+          "El botón 'Añadir filtro' agrega correctamente una nueva fila de inputs.",
+          "El botón 'Restablecer' elimina todos los filtros aplicados y limpia las filas de inputs.",
+          "El botón 'Aplicar' filtra la lista de proyectos según los criterios ingresados."
+        ]
+      }
+    ],
+    "description": "Ventana modal para aplicar filtros avanzados a la tabla de proyectos.",
+    "images": [
+      "../captures/04a_modalFiltroTablas.png",
+      "../captures/04b_modalFiltroTablas.png",
+      "../captures/04c_modalFiltroTablas.png",
+      "../captures/04d_modalFiltroTablas.png"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Modal Campos",
+    "position": "Aparece en el centro de la página al presionar el botón 'Campos' en el componente Lista de Proyectos.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Header",
+        "element_desc": "Contiene el título 'Seleccionar campos visibles' y una 'X' para cerrar la ventana.",
+        "functional": [
+          "El título 'Seleccionar campos visibles' se muestra en el centro del header.",
+          "La 'X' en el extremo derecho cierra la ventana modal al hacer clic."
+        ],
+        "aceptation": [
+          "El título 'Seleccionar campos visibles' es visible y está centrado en el header.",
+          "La 'X' cierra correctamente la ventana modal al ser presionada."
+        ]
+      },
+      {
+        "element_name": "Body",
+        "element_desc": "Contiene un checklist con los campos que pueden ser visibles en la lista de proyectos.",
+        "functional": [
+          "El checklist incluye los siguientes campos: Nombre del Proyecto, Descripción, Estado, Propietario, Fecha de modificación, Fecha de implementación, Sector, Envíos.",
+          "El usuario puede seleccionar o deseleccionar cada campo para controlar su visibilidad en la lista de proyectos."
+        ],
+        "aceptation": [
+          "El checklist muestra correctamente todos los campos disponibles.",
+          "El usuario puede marcar o desmarcar las casillas para elegir qué campos se mostrarán en la lista de proyectos."
+        ]
+      },
+      {
+        "element_name": "Footer",
+        "element_desc": "Contiene dos botones para gestionar la visibilidad de los campos.",
+        "functional": [
+          "El botón 'Restablecer' devuelve la selección de campos a la configuración predeterminada.",
+          "El botón 'Aplicar' guarda los cambios y actualiza la visibilidad de los campos en la lista de proyectos."
+        ],
+        "aceptation": [
+          "El botón 'Restablecer' regresa correctamente la selección a los campos visibles por defecto.",
+          "El botón 'Aplicar' actualiza correctamente los campos visibles en la lista de proyectos según la selección del usuario."
+        ]
+      }
+    ],
+    "description": "Ventana modal que permite seleccionar los campos visibles en la lista de proyectos.",
+    "images": [
+      "../captures/05a_modalCampos.png"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Modal Crear Proyecto",
+    "position": "Aparece en el centro de la página al presionar el botón 'Nuevo' en el componente Menu Vertical.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Header",
+        "element_desc": "Contiene el título 'Crear proyecto: Detalles del proyecto' y una 'X' para cerrar la ventana.",
+        "functional": [
+          "El título 'Crear proyecto: Detalles del proyecto' se muestra en el centro del header.",
+          "La 'X' en el extremo derecho cierra la ventana modal al hacer clic."
+        ],
+        "aceptation": [
+          "El título 'Crear proyecto: Detalles del proyecto' es visible y está centrado en el header.",
+          "La 'X' cierra correctamente la ventana modal al ser presionada."
+        ]
+      },
+      {
+        "element_name": "Body",
+        "element_desc": "Contiene tres inputs para capturar la información del proyecto.",
+        "functional": [
+          "El input 'Nombre del proyecto' es obligatorio y debe permitir al usuario ingresar el nombre del proyecto.",
+          "El input 'Descripción' es opcional y permite al usuario ingresar una breve descripción del proyecto.",
+          "El input 'Sector' es obligatorio y permite al usuario seleccionar el sector al que pertenece el proyecto."
+        ],
+        "aceptation": [
+          "El input 'Nombre del proyecto' debe estar presente y requerir que el usuario lo complete antes de proceder.",
+          "El input 'Descripción' debe estar presente y ser opcional.",
+          "El input 'Sector' debe estar presente y requerir que el usuario lo complete antes de proceder."
+        ]
+      },
+      {
+        "element_name": "Footer",
+        "element_desc": "Contiene dos botones para gestionar la creación del proyecto.",
+        "functional": [
+          "El botón 'Regresar' cierra la ventana modal sin guardar los cambios.",
+          "El botón 'Crear Proyecto' valida los campos obligatorios, crea el proyecto, y redirige al usuario a la sección de creación de formularios."
+        ],
+        "aceptation": [
+          "El botón 'Regresar' cierra correctamente la ventana modal al ser presionado.",
+          "El botón 'Crear Proyecto' valida correctamente los campos obligatorios, y al ser presionado, crea el proyecto y redirige al usuario a la creación de formularios."
+        ]
+      }
+    ],
+    "description": "Ventana modal que permite al usuario crear un nuevo proyecto proporcionando detalles básicos.",
+    "images": [
+      "../captures/06a_modalCrearProyecto.png"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Navbar de Proyecto",
+    "position": "Debajo del navbar principal, ocupa 4/5 del ancho y está ubicado a la derecha del menú vertical.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Resumen",
+        "element_desc": "Pestaña que muestra los datos básicos del proyecto, gráficos y enlaces directos a secciones clave.",
+        "functional": [
+          "Al hacer clic en 'Resumen', se carga la vista con los datos básicos del proyecto, gráficos relevantes y enlaces directos."
+        ],
+        "aceptation": [
+          "La pestaña 'Resumen' está centrada y es visible en el navbar.",
+          "Al hacer clic en 'Resumen', se muestran correctamente los datos básicos del proyecto, gráficos y enlaces directos."
+        ]
+      },
+      {
+        "element_name": "Formulario",
+        "element_desc": "Pestaña que permite acceder a las versiones del formulario, implementaciones e historial del proyecto.",
+        "functional": [
+          "Al hacer clic en 'Formulario', se carga la vista con las versiones, implementaciones e historial del formulario asociado al proyecto."
+        ],
+        "aceptation": [
+          "La pestaña 'Formulario' está centrada y es visible en el navbar.",
+          "Al hacer clic en 'Formulario', se muestran correctamente las versiones, implementaciones e historial del formulario."
+        ]
+      },
+      {
+        "element_name": "Datos",
+        "element_desc": "Pestaña que muestra los registros enviados, junto a informes y galerías asociados al proyecto.",
+        "functional": [
+          "Al hacer clic en 'Datos', se carga la vista con los registros enviados, los informes generados y las galerías asociadas al proyecto."
+        ],
+        "aceptation": [
+          "La pestaña 'Datos' está centrada y es visible en el navbar.",
+          "Al hacer clic en 'Datos', se muestran correctamente los registros enviados, los informes y las galerías."
+        ]
+      },
+      {
+        "element_name": "Configuración",
+        "element_desc": "Pestaña que permite acceder y modificar la configuración del proyecto.",
+        "functional": [
+          "Al hacer clic en 'Configuración', se carga la vista con las opciones de configuración del proyecto."
+        ],
+        "aceptation": [
+          "La pestaña 'Configuración' está centrada y es visible en el navbar.",
+          "Al hacer clic en 'Configuración', se muestran correctamente las opciones para configurar el proyecto."
+        ]
+      }
+    ],
+    "description": "Barra de navegación específica para la vista de proyectos, centrada en la parte inferior del navbar principal y a la derecha del menú vertical, permitiendo la navegación entre diferentes aspectos del proyecto.",
+    "images": [
+      "../captures/01e_barraBusqueda.png",
+      "../captures/07a_navbarProyecto.png"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Información Proyecto",
+    "position": "Ocupa 2/3 de la página de resumen.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Descripción",
+        "element_desc": "Muestra el título del proyecto.",
+        "functional": [
+          "Debe mostrar el nombre completo del proyecto."
+        ],
+        "aceptation": [
+          "El nombre del proyecto se muestra correctamente en la primera fila."
+        ]
+      },
+      {
+        "element_name": "Estado",
+        "element_desc": "Muestra el estado actual del proyecto.",
+        "functional": [
+          "Debe indicar el estado actual del proyecto (e.g., En progreso, Completado)."
+        ],
+        "aceptation": [
+          "El estado del proyecto se muestra correctamente en la segunda fila."
+        ]
+      },
+      {
+        "element_name": "Preguntas",
+        "element_desc": "Muestra la cantidad de preguntas en el formulario del proyecto.",
+        "functional": [
+          "Debe indicar el número total de preguntas que contiene el formulario asociado al proyecto."
+        ],
+        "aceptation": [
+          "La cantidad de preguntas del formulario se muestra correctamente en la segunda fila."
+        ]
+      },
+      {
+        "element_name": "Propietario",
+        "element_desc": "Muestra el propietario del proyecto.",
+        "functional": [
+          "Debe mostrar el nombre del propietario del proyecto."
+        ],
+        "aceptation": [
+          "El nombre del propietario se muestra correctamente en la segunda fila."
+        ]
+      },
+      {
+        "element_name": "Última Modificación",
+        "element_desc": "Muestra la fecha de la última modificación del proyecto.",
+        "functional": [
+          "Debe mostrar la fecha en que se realizó la última modificación en el proyecto."
+        ],
+        "aceptation": [
+          "La fecha de la última modificación se muestra correctamente en la tercera fila."
+        ]
+      },
+      {
+        "element_name": "Última Implementación",
+        "element_desc": "Muestra la fecha de la última implementación del proyecto.",
+        "functional": [
+          "Debe mostrar la fecha en que se realizó la última implementación del proyecto."
+        ],
+        "aceptation": [
+          "La fecha de la última implementación se muestra correctamente en la tercera fila."
+        ]
+      },
+      {
+        "element_name": "Último Envío",
+        "element_desc": "Muestra la fecha del último envío de datos del proyecto.",
+        "functional": [
+          "Debe mostrar la fecha del último envío realizado en el proyecto."
+        ],
+        "aceptation": [
+          "La fecha del último envío se muestra correctamente en la tercera fila."
+        ]
+      },
+      {
+        "element_name": "Sector",
+        "element_desc": "Muestra el sector administrativo al que pertenece el proyecto.",
+        "functional": [
+          "Debe mostrar el sector administrativo correspondiente al proyecto."
+        ],
+        "aceptation": [
+          "El sector administrativo se muestra correctamente en la cuarta fila."
+        ]
+      }
+    ],
+    "description": "Contenedor con información relevante del proyecto en cuatro filas.",
+    "images": [
+      "../captures/08a_informacionProyecto.png"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Envios Dashboard",
+    "position": "Ocupa 2/3 de la página de resumen, debajo de la Información sobre el Proyecto.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Título",
+        "element_desc": "Muestra el título 'Envios'.",
+        "functional": [
+          "Debe mostrar el texto 'Envios' en la parte superior del componente."
+        ],
+        "aceptation": [
+          "El título 'Envios' se muestra correctamente en la parte superior del componente."
+        ]
+      },
+      {
+        "element_name": "Header",
+        "element_desc": "Contiene cuatro botones para seleccionar el periodo de tiempo del gráfico.",
+        "functional": [
+          "Al hacer clic en un botón, se debe actualizar el gráfico de barras para mostrar los envíos del periodo seleccionado."
+        ],
+        "aceptation": [
+          "Los botones 'Últimos 7 días', 'Últimos 31 días', 'Últimos 3 meses', y 'Últimos 12 meses' se muestran correctamente.",
+          "Al hacer clic en un botón, el gráfico de barras se actualiza para reflejar el periodo seleccionado."
+        ]
+      },
+      {
+        "element_name": "Body",
+        "element_desc": "Muestra un gráfico de barras con los envíos realizados en el periodo seleccionado.",
+        "functional": [
+          "Debe mostrar un gráfico de barras que refleje los envíos realizados en el periodo seleccionado."
+        ],
+        "aceptation": [
+          "El gráfico de barras se muestra correctamente y se actualiza de acuerdo al periodo seleccionado."
+        ]
+      },
+      {
+        "element_name": "Footer",
+        "element_desc": "Muestra la cantidad de envíos realizados en el periodo seleccionado y el total de envíos.",
+        "functional": [
+          "Debe mostrar el número de envíos realizados en el periodo seleccionado.",
+          "Debe mostrar el número total de envíos realizados en el proyecto."
+        ],
+        "aceptation": [
+          "El número de envíos en el periodo seleccionado se muestra correctamente en el pie de página.",
+          "El número total de envíos se muestra correctamente en el pie de página."
+        ]
+      }
+    ],
+    "description": "Componente que muestra un gráfico de barras de los envíos realizados en diferentes periodos de tiempo y muestra la cantidad de envíos.",
+    "images": [
+      "../captures/09a_enviosDashboard.png",
+      "../captures/09b_enviosDashboard.png",
+      "../captures/09c_enviosDashboard.png"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Barra de Enlaces",
+    "position": "Ocupa 1/3 de la página de resumen, a la derecha de la Información sobre el Proyecto.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Sección 1: Enlace Directo",
+        "element_desc": "Contiene enlaces directos a acciones importantes dentro del proyecto.",
+        "functional": [
+          "Recolectar datos: Redirige a la sección de 'Formulario' del proyecto.",
+          "Compartir proyecto: Abre el modal de compartir proyecto.",
+          "Editar formulario: Redirige a la página de editar formulario.",
+          "Previsualizar: Abre el modal con una vista previa del formulario."
+        ],
+        "aceptation": [
+          "El título 'Enlace directo' se muestra correctamente.",
+          "Los enlaces 'Recolectar datos', 'Compartir proyecto', 'Editar formulario', y 'Previsualizar' funcionan correctamente y redirigen a las secciones/modales correspondientes."
+        ]
+      },
+      {
+        "element_name": "Sección 2: Datos",
+        "element_desc": "Contiene enlaces a las diferentes secciones de datos del proyecto.",
+        "functional": [
+          "Tabla: Redirige a la sección de 'Datos' del proyecto, pestaña 'Tabla'.",
+          "Informes: Redirige a la sección de 'Datos' del proyecto, pestaña 'Informes'.",
+          "Galería: Redirige a la sección de 'Datos' del proyecto, pestaña 'Galería'.",
+          "Descargas: Redirige a la sección de 'Datos' del proyecto, pestaña 'Descargas'.",
+          "Mapa: Redirige a la sección de 'Datos' del proyecto, pestaña 'Mapa'."
+        ],
+        "aceptation": [
+          "El título 'Datos' se muestra correctamente.",
+          "Los enlaces 'Tabla', 'Informes', 'Galería', 'Descargas', y 'Mapa' funcionan correctamente y redirigen a las secciones correspondientes."
+        ]
+      }
+    ],
+    "description": "Componente que proporciona enlaces directos y secciones de datos relacionados con el proyecto.",
+    "images": [
+      "../captures/10a_barraEnlaces.png"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Modal Compartir",
+    "position": "Aparece en el centro de la página al presionar el botón 'Compartir Proyecto' en el componente Barra de Enlaces.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Header",
+        "element_desc": "Contiene el título 'Permisos de uso compartido'.",
+        "functional": [
+          "El título 'Permisos de uso compartido' se muestra correctamente."
+        ],
+        "aceptation": [
+          "El header del modal aparece con el título 'Permisos de uso compartido'."
+        ]
+      },
+      {
+        "element_name": "SubHeader",
+        "element_desc": "Muestra el título del proyecto debajo del header.",
+        "functional": [
+          "El título del proyecto se muestra correctamente debajo del header."
+        ],
+        "aceptation": [
+          "El subheader con el título del proyecto se muestra correctamente."
+        ]
+      },
+      {
+        "element_name": "Body",
+        "element_desc": "Contiene el contenido principal del modal con las opciones de compartir y permisos.",
+        "functional": [
+          "Subtítulo: 'Quién tiene acceso' se muestra correctamente.",
+          "Lista de colaboradores lideradas por el propietario se muestra con avatar, nombre de usuario, y rol.",
+          "Botón 'Agregar usuario' despliega un menú en el mismo modal para agregar usuario."
+        ],
+        "aceptation": [
+          "La lista de colaboradores se muestra correctamente, y cada usuario se presenta con avatar, nombre de usuario y rol.",
+          "El botón 'Agregar usuario' funciona correctamente y despliega el menú de agregar usuario."
+        ]
+      },
+      {
+        "element_name": "Menu Agregar Usuario",
+        "element_desc": "Menú desplegado al hacer clic en 'Agregar usuario', con opciones de permisos para el nuevo usuario.",
+        "functional": [
+          "Input para agregar el nombre de usuario se muestra correctamente.",
+          "Lista de checkboxes con permisos se muestra correctamente.",
+          "Botón 'Conceder permisos' agrega el usuario con los permisos seleccionados.",
+          "Botón 'X' cierra el menú de agregar usuario."
+        ],
+        "aceptation": [
+          "El input para agregar nombre de usuario funciona correctamente.",
+          "Los checkboxes de permisos se muestran y seleccionan correctamente.",
+          "El botón 'Conceder permisos' agrega el usuario con los permisos seleccionados.",
+          "El botón 'X' cierra el menú correctamente."
+        ]
+      },
+      {
+        "element_name": "Switch Permitir Envíos",
+        "element_desc": "Debajo del menú agregar usuario, un switch para permitir envíos sin autenticación.",
+        "functional": [
+          "Switch permite activar o desactivar la opción de permitir envíos sin nombre de usuario ni contraseña."
+        ],
+        "aceptation": [
+          "El switch para permitir envíos sin autenticación se muestra y funciona correctamente."
+        ]
+      },
+      {
+        "element_name": "Compartir Públicamente",
+        "element_desc": "Sección para compartir públicamente mediante un enlace.",
+        "functional": [
+          "Dos checkboxes: 'Cualquier persona puede ver este formulario' y 'Cualquier persona puede ver los envíos que se realizan a través de este formulario'."
+        ],
+        "aceptation": [
+          "Los checkboxes se muestran y funcionan correctamente."
+        ]
+      },
+      {
+        "element_name": "Enlace para Compartir",
+        "element_desc": "Muestra el enlace del formulario para compartir.",
+        "functional": [
+          "El enlace del formulario se muestra correctamente y es seleccionable."
+        ],
+        "aceptation": [
+          "El enlace para compartir se muestra correctamente."
+        ]
+      }
+    ],
+    "description": "Modal que permite configurar los permisos de uso compartido y generar un enlace para compartir el proyecto.",
+    "images": [
+      "../captures/11a_modalCompartir.png",
+      "../captures/11b_modalCompartir.png"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Login",
+    "position": "En el centro de la página.",
+    "isCompleted": false,
+    "elements": [
+        {
+            "element_name": "Email Input",
+            "element_desc": "Campo de entrada para el correo electrónico.",
+            "functional": [
+                "El usuario puede ingresar su dirección de correo electrónico."
+            ],
+            "aceptation": [
+                "El campo de correo electrónico es visible y permite la entrada de texto."
+            ]
+        },
+        {
+            "element_name": "Password Input",
+            "element_desc": "Campo de entrada para la contraseña.",
+            "functional": [
+                "El usuario puede ingresar su contraseña."
+            ],
+            "aceptation": [
+                "El campo de contraseña es visible y permite la entrada de texto."
+            ]
+        },
+        {
+            "element_name": "Checkbox Recuerdame",
+            "element_desc": "Checkbox para recordar al usuario en futuras sesiones.",
+            "functional": [
+                "El usuario puede activar o desactivar la opción 'Recuerdame'."
+            ],
+            "aceptation": [
+                "El checkbox es visible y seleccionable."
+            ]
+        },
+        {
+            "element_name": "Botón Logear",
+            "element_desc": "Botón para iniciar sesión.",
+            "functional": [
+                "Al hacer clic, el sistema intenta iniciar sesión con las credenciales ingresadas."
+            ],
+            "aceptation": [
+                "El botón es visible y funciona correctamente al hacer clic."
+            ]
+        },
+        {
+            "element_name": "Enlace a Sign Up",
+            "element_desc": "Enlace debajo del formulario que redirige a la página de registro.",
+            "functional": [
+                "Al hacer clic en el enlace, el usuario es redirigido a la página de registro."
+            ],
+            "aceptation": [
+                "El enlace de redirección a la página de registro es visible y funciona correctamente."
+            ]
+        }
+      ],
+      "description": "Página de login genérica con email, contraseña, checkbox 'Recuerdame', botón de login y enlace de redirección a la página de registro.",
+      "images": [
+          "../captures/12a_login.png"
+      ]
+  },
+  {
+    "id": 13,
+    "title": "Versión Formulario",
+    "position": "Debajo de la barra de navegación del proyecto.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Header",
+        "element_desc": "Contiene el título 'Versión Actual' alineado a la derecha y tres iconos: editar, vista previa y compartir proyecto.",
+        "functional": [
+          "El título 'Versión Actual' está visible y alineado al extremo derecho.",
+          "Los iconos permiten editar el formulario, ver una vista previa y compartir el proyecto."
+        ],
+        "aceptation": [
+          "Los iconos son funcionales y redirigen a las respectivas acciones: editar, vista previa, y compartir proyecto."
+        ]
+      },
+      {
+        "element_name": "Body",
+        "element_desc": "Muestra la versión actual del formulario, la fecha de la última modificación, y la cantidad de preguntas.",
+        "functional": [
+          "Muestra la versión actual del formulario, por ejemplo, 'v2'.",
+          "Muestra la fecha de la última modificación del formulario.",
+          "Muestra la cantidad de preguntas del formulario."
+        ],
+        "aceptation": [
+          "La versión, fecha de modificación, y cantidad de preguntas son visibles y correctas."
+        ]
+      },
+      {
+        "element_name": "Botón Implementar de Nuevo",
+        "element_desc": "Botón que permite volver a implementar el formulario con una confirmación.",
+        "functional": [
+          "El botón lanza una 'alert' para confirmar si el usuario desea implementar de nuevo el formulario.",
+          "Si hay una nueva versión, los cambios realizados en la edición se envían para la implementación."
+        ],
+        "aceptation": [
+          "El botón 'Implementar de nuevo' funciona correctamente y lanza la alerta de confirmación.",
+          "Si se confirma, se implementan los cambios realizados en la nueva versión."
+        ]
+      }
+    ],
+    "description": "Componente que muestra la versión actual del formulario, con opciones para editar, vista previa y compartir, además de la posibilidad de implementar una nueva versión.",
+    "images": [
+      "../captures/13a_versionFormulario.png",
+      "../captures/13b_versionFormulario.png"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Historial del Formulario",
+    "position": "Debajo de la sección 'Versión Formulario'.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Enlace Mostrar/Ocultar Historial",
+        "element_desc": "Enlace que permite alternar entre mostrar y ocultar el historial completo del formulario.",
+        "functional": [
+          "El enlace cambia dinámicamente entre 'Mostrar todo el historial' y 'Ocultar todo el historial' según el estado actual.",
+          "Al hacer clic en el enlace, se despliega o colapsa la lista de versiones del formulario."
+        ],
+        "aceptation": [
+          "El enlace funciona correctamente y alterna entre mostrar y ocultar el historial."
+        ]
+      },
+      {
+        "element_name": "Historial del Formulario",
+        "element_desc": "Sección que aparece al presionar 'Mostrar todo el historial', mostrando una lista con las versiones del formulario.",
+        "functional": [
+          "Al presionar 'Mostrar todo el historial', se despliega un título 'Historial del formulario' junto a una lista de versiones.",
+          "Cada versión se muestra en una fila con tres columnas: Versión, Última modificación, y un botón 'Clonar'.",
+          "La version actual esta marcada por una etiqueta 'implementado'.",
+          "El botón 'Clonar' permite copiar el formulario y crear un nuevo proyecto a partir de esa versión."
+        ],
+        "aceptation": [
+          "El historial del formulario muestra las versiones correctamente.",
+          "El botón 'Clonar' funciona correctamente y permite copiar el formulario en un nuevo proyecto."
+        ]
+      }
+    ],
+    "description": "Componente que muestra el historial completo del formulario, permitiendo ver versiones anteriores y clonar el formulario para un nuevo proyecto.",
+    "images": [
+      "../captures/14a_historialFormulario.png",
+      "../captures/14b_historialFormulario.png"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Recolectar Datos",
+    "position": "Sección de recolección de datos en la pestaña 'Formulario'.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Título",
+        "element_desc": "Título que indica la sección de recolección de datos.",
+        "functional": [],
+        "aceptation": [
+          "El título 'Recolectar datos' se muestra correctamente al inicio de la sección."
+        ]
+      },
+      {
+        "element_name": "Fila 1: Estado del Formulario",
+        "element_desc": "Una fila que contiene un select para administrar el estado del formulario y dos botones: 'Copiar' y 'Abrir'.",
+        "functional": [
+          "El select permite seleccionar entre las siguientes opciones: En línea (múltiples envíos), En línea (único envío), Solo lectura.",
+          "El botón 'Copiar' copia la URL del formulario.",
+          "El botón 'Abrir' redirige al usuario al formulario para realizar envíos."
+        ],
+        "aceptation": [
+          "El select funciona correctamente y permite cambiar el estado del formulario.",
+          "El botón 'Copiar' copia la URL correctamente.",
+          "El botón 'Abrir' redirige correctamente al formulario."
+        ]
+      },
+      {
+        "element_name": "Fila 2: Envíos Anónimos",
+        "element_desc": "Un toggle button para permitir o deshabilitar envíos anónimos.",
+        "functional": [
+          "El toggle permite al usuario activar o desactivar la opción de permitir envíos anónimos al formulario."
+        ],
+        "aceptation": [
+          "El toggle funciona correctamente y permite cambiar el estado de los envíos anónimos."
+        ]
+      }
+    ],
+    "description": "Sección de recolección de datos que permite al usuario gestionar el estado del formulario, copiar la URL, abrir el formulario, y permitir o deshabilitar envíos anónimos.",
+    "images": [
+      "../captures/15a_recolectarDatos.png"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Sub Menú de Datos",
+    "position": "Pequeño menú vertical en la sección de 'Datos', ubicado a la izquierda de la página.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Título",
+        "element_desc": "Sub Menú de Datos que permite navegar entre las diferentes representaciones de los datos enviados.",
+        "functional": [],
+        "aceptation": [
+          "El título 'Sub Menú de Datos' se muestra correctamente al inicio del menú."
+        ]
+      },
+      {
+        "element_name": "Opciones del Menú",
+        "element_desc": "Cinco opciones disponibles para ver diferentes representaciones de los datos enviados: Tabla, Informes, Galería, Descarga, Mapa. Cada opción tiene un icono a la izquierda.",
+        "functional": [
+          "Cada opción del menú permite al usuario acceder a una representación específica de los datos enviados.",
+          "Las opciones son: Tabla, Informes, Galería, Descarga, Mapa.",
+          "Cada opción cuenta con un icono representativo ubicado a la izquierda de la etiqueta."
+        ],
+        "aceptation": [
+          "El menú muestra las cinco opciones correctamente.",
+          "Al hacer clic en una opción, se redirige correctamente a la representación de los datos seleccionada.",
+          "Los iconos de cada opción se muestran correctamente a la izquierda de las etiquetas."
+        ]
+      }
+    ],
+    "description": "Menú vertical ubicado a la izquierda de la sección de 'Datos' que permite navegar entre las distintas representaciones de los datos enviados, con iconos para cada opción.",
+    "images": [
+      "../captures/16a_subMenuDatos.png"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Sección Tabla",
+    "position": "Debajo del submenú de datos en la sección 'Datos'.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Iconos sobre la tabla",
+        "element_desc": "Dos iconos sobre la tabla que permiten 'Ocultar campos' y 'Pantalla completa'.",
+        "functional": [
+          "El icono 'Ocultar campos' abre un modal con un checklist de campos a mostrar u ocultar en la tabla.",
+          "El icono 'Pantalla completa' expande la tabla a pantalla completa."
+        ],
+        "aceptation": [
+          "El icono 'Ocultar campos' funciona correctamente y muestra el modal.",
+          "El icono 'Pantalla completa' expande correctamente la tabla."
+        ]
+      },
+      {
+        "element_name": "Tabla",
+        "element_desc": "Tabla que muestra los datos enviados. Su tamaño varía según la cantidad de campos y filas.",
+        "functional": [
+          "La tabla muestra correctamente los datos enviados.",
+          "Cuando la cantidad de filas excede la cantidad predeterminada, se activa la paginación.",
+          "La primera columna tiene como encabezado la cantidad de resultados.",
+          "Cada fila contiene botones para 'Editar', 'Visualizar' y un checkbox para 'Eliminar'."
+        ],
+        "aceptation": [
+          "La tabla se renderiza correctamente con los datos.",
+          "La paginación funciona cuando se excede el número de filas predeterminado.",
+          "La primera columna muestra correctamente la cantidad de resultados.",
+          "Los botones 'Editar', 'Visualizar' y el checkbox para 'Eliminar' funcionan correctamente en cada fila."
+        ]
+      }
+    ],
+    "description": "Sección 'Tabla' en la página de 'Datos'. Incluye iconos para ocultar campos y pantalla completa, y una tabla que varía en tamaño según los campos, con paginación, botones de acción, y un checkbox para eliminar.",
+    "images": [
+      "../captures/17a_seccionTabla.png",
+      "../captures/17b_seccionTabla.png",
+      "../captures/17c_seccionTabla.png"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Sección Informes",
+    "position": "Debajo del submenú de datos en la sección 'Datos'.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Informe automatizado de datos",
+        "element_desc": "Informe automatizado de datos enviados al proyecto. Cada tarjeta representa un tipo de dato y muestra un gráfico y una lista de datos en crudo.",
+        "functional": [
+          "Cada tarjeta tiene un título en el header.",
+          "El cuerpo de la tarjeta contiene un gráfico representando los datos.",
+          "Debajo del gráfico, se muestra una lista con los datos en crudo.",
+          "El informe se genera automáticamente basándose en los tipos de datos de cada campo."
+        ],
+        "aceptation": [
+          "El informe se genera automáticamente de manera correcta con los datos enviados.",
+          "Cada tarjeta contiene un título, un gráfico y una lista de datos en crudo."
+        ]
+      },
+      {
+        "element_name": "Opciones de representación",
+        "element_desc": "Permite cambiar la forma de representación y el color del gráfico en cada tarjeta.",
+        "functional": [
+          "Al hacer clic en los tres puntos en la esquina derecha de la tarjeta, se despliega un menú de opciones para cambiar la representación y el color del gráfico.",
+          "Las formas de representación disponibles son: Barras Verticales, Barras Horizontales, Línea, Circular, Rosquilla, Área Lineal, Área Circular, Radar."
+        ],
+        "aceptation": [
+          "El menú de opciones aparece correctamente al hacer clic en los tres puntos.",
+          "La representación del gráfico cambia correctamente al seleccionar una nueva forma.",
+          "El color del gráfico cambia correctamente según la opción seleccionada."
+        ]
+      },
+      {
+        "element_name": "Botones superiores",
+        "element_desc": "Dos botones en la parte superior del informe: 'Imprimir' y 'Pantalla completa'.",
+        "functional": [
+          "El botón 'Imprimir' permite imprimir el informe.",
+          "El botón 'Pantalla completa' expande el informe a pantalla completa."
+        ],
+        "aceptation": [
+          "El botón 'Imprimir' funciona correctamente y permite imprimir el informe.",
+          "El botón 'Pantalla completa' expande correctamente el informe."
+        ]
+      }
+    ],
+    "description": "Sección 'Informes' en la página de 'Datos'. Muestra informes automatizados de datos enviados, con gráficos ajustables y opciones de personalización. Ofrece botones para imprimir y ver en pantalla completa.",
+    "images": [
+      "../captures/18a_seccionInformes.png",
+      "../captures/18b_seccionInformes.png",
+      "../captures/18c_seccionInformes.png",
+      "../captures/18d_seccionInformes.png",
+      "../captures/18e_seccionInformes.png",
+      "../captures/18f_seccionInformes.png"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Sección Imágenes",
+    "position": "Debajo del submenú de datos en la sección 'Datos'.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Título",
+        "element_desc": "Galería de imágenes.",
+        "functional": [
+          "El título 'Galería de imágenes' aparece en la parte superior de la sección."
+        ],
+        "aceptation": [
+          "El título se muestra correctamente."
+        ]
+      },
+      {
+        "element_name": "Input select de campo",
+        "element_desc": "Permite seleccionar las imágenes de un campo específico.",
+        "functional": [
+          "El input select contiene una lista de campos que contienen imágenes.",
+          "Al seleccionar un campo, la galería muestra solo las imágenes de ese campo."
+        ],
+        "aceptation": [
+          "El input select funciona correctamente y filtra las imágenes de acuerdo al campo seleccionado."
+        ]
+      },
+      {
+        "element_name": "Selectores de fechas",
+        "element_desc": "Permiten buscar imágenes dentro de un rango de fechas.",
+        "functional": [
+          "Dos selectores de fechas, 'Desde' y 'Hasta', permiten seleccionar un rango de fechas para filtrar las imágenes.",
+          "La galería se actualiza para mostrar solo las imágenes dentro del rango seleccionado."
+        ],
+        "aceptation": [
+          "Los selectores de fechas funcionan correctamente y filtran las imágenes en base al rango de fechas seleccionado."
+        ]
+      }
+    ],
+    "description": "Sección 'Imágenes' en la página de 'Datos'. Muestra una galería de imágenes filtrada por campo y por un rango de fechas seleccionadas.",
+    "images": [
+      "../../public/captures/19a_seccionImagenes.png"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Sección Descargas",
+    "position": "Debajo del submenú de datos en la sección 'Datos'.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Título",
+        "element_desc": "Descargas",
+        "functional": [
+          "El título 'Descargas' aparece en la parte superior de la sección."
+        ],
+        "aceptation": [
+          "El título se muestra correctamente."
+        ]
+      },
+      {
+        "element_name": "Selectores de tipo de archivo y formato de headers",
+        "element_desc": "Permiten seleccionar el tipo de archivo a descargar y el formato de los encabezados.",
+        "functional": [
+          "El primer selector permite escoger el tipo de archivo entre: XLS, CSV, GeoJSON y Coordenadas GPS (KML).",
+          "El segundo selector permite escoger el formato de los encabezados."
+        ],
+        "aceptation": [
+          "Los selectores permiten escoger correctamente el tipo de archivo y el formato de encabezados."
+        ]
+      },
+      {
+        "element_name": "Botón Exportar",
+        "element_desc": "Agrega el archivo seleccionado a la lista de exportaciones para descargar.",
+        "functional": [
+          "El botón 'Exportar' agrega el archivo configurado a la lista de exportaciones."
+        ],
+        "aceptation": [
+          "El botón 'Exportar' funciona correctamente y agrega archivos a la lista de exportaciones."
+        ]
+      },
+      {
+        "element_name": "Lista de exportaciones",
+        "element_desc": "Muestra las exportaciones realizadas con opciones para descargar o eliminar.",
+        "functional": [
+          "La lista de exportaciones muestra las columnas: Tipo, Creado, Formato de Encabezados, Versiones.",
+          "Cada fila tiene un botón de 'descargar' archivo y un botón para eliminar la exportación."
+        ],
+        "aceptation": [
+          "La lista muestra las exportaciones correctamente y los botones de 'descargar' y 'eliminar' funcionan adecuadamente."
+        ]
+      }
+    ],
+    "description": "Sección 'Descargas' en la página de 'Datos'. Permite seleccionar el tipo de archivo y formato de encabezados para la exportación, y gestionar la lista de exportaciones.",
+    "images": [
+      "../captures/20a_seccionDescargas.png",
+      "../captures/20b_seccionDescargas.png",
+      "../captures/20c_seccionDescargas.png",
+      "../captures/20d_seccionDescargas.png"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Sección Mapa",
+    "position": "Debajo del submenú de datos en la sección 'Datos'.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Visualización de mapa",
+        "element_desc": "Muestra los puntos geográficos en un mapa OpenStreetMap.",
+        "functional": [
+          "El mapa carga correctamente usando OpenStreetMap.",
+          "Los datos de tipo 'geopoint' se visualizan como marcadores en el mapa."
+        ],
+        "aceptation": [
+          "El mapa se carga y los puntos geográficos se muestran correctamente."
+        ]
+      },
+      {
+        "element_name": "Interacción del mapa",
+        "element_desc": "Permite interactuar con el mapa, acercar, alejar y mover la vista.",
+        "functional": [
+          "El mapa soporta interacción del usuario, incluyendo zoom y desplazamiento."
+        ],
+        "aceptation": [
+          "El mapa responde correctamente a las interacciones de acercar, alejar y mover."
+        ]
+      }
+    ],
+    "description": "Sección 'Mapa' en la página de 'Datos'. Muestra los datos de tipo 'geopoint' como marcadores en un mapa interactivo de OpenStreetMap.",
+    "images": [
+      "../captures/21a_seccionMapa.png"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Sección General",
+    "position": "Ubicada en la sección de configuración del proyecto.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Formulario de edición",
+        "element_desc": "Permite editar los campos del proyecto.",
+        "functional": [
+          "Campo 'Nombre del Proyecto' es obligatorio.",
+          "Campo 'Descripción' es opcional.",
+          "Campo 'Sector' es obligatorio."
+        ],
+        "aceptation": [
+          "Los cambios en el formulario se guardan correctamente.",
+          "Se muestran mensajes de error si los campos obligatorios no están completos."
+        ]
+      },
+      {
+        "element_name": "Botones de acción",
+        "element_desc": "Incluye tres botones para acciones sobre el proyecto.",
+        "functional": [
+          "'Guardar Cambios' guarda las modificaciones realizadas.",
+          "'Archivar Proyecto' desactiva la recepción de nuevos envíos.",
+          "'Eliminar Proyecto y Datos' elimina el proyecto junto con sus datos asociados, previa confirmación del usuario."
+        ],
+        "aceptation": [
+          "Las acciones de guardado, archivado y eliminación funcionan correctamente."
+        ]
+      }
+    ],
+    "description": "La Sección General permite editar los datos básicos del proyecto, incluyendo el nombre, la descripción y el sector, con botones para guardar cambios, archivar el proyecto o eliminarlo.",
+    "images": [
+      "../captures/22a_seccionGeneral.png"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Sección Compartir Proyecto",
+    "position": "Ubicada en la sección de configuración del proyecto.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Permisos de uso compartido",
+        "element_desc": "Configura los permisos de los usuarios que tienen acceso al proyecto.",
+        "functional": [
+          "Se puede ver y editar la lista de colaboradores con sus roles y permisos.",
+          "Botón 'Agregar usuario' permite añadir un nuevo colaborador con permisos específicos.",
+          "Permitir envíos sin autenticación mediante un switch."
+        ],
+        "aceptation": [
+          "La lista de usuarios se actualiza correctamente.",
+          "El menú para agregar usuarios funciona como se espera."
+        ]
+      },
+      {
+        "element_name": "Opciones de compartición pública",
+        "element_desc": "Permite compartir el proyecto públicamente a través de un enlace.",
+        "functional": [
+          "Opciones para permitir que cualquier persona pueda ver el formulario o los envíos.",
+          "Enlace generado para compartir el proyecto."
+        ],
+        "aceptation": [
+          "Las opciones de compartición pública se aplican correctamente."
+        ]
+      }
+    ],
+    "description": "La Sección Compartir Proyecto permite gestionar los permisos de uso compartido del proyecto, añadir colaboradores con permisos específicos, y generar un enlace para compartir el proyecto públicamente.",
+    "images": [
+      "../captures/23a_seccionCompartir.png"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Crear/Editar Formulario",
+    "position": "Ubicada en la sección de formulario del proyecto.",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Barra de Proyecto",
+        "element_desc": "Barra superior con botones y nombre del proyecto.",
+        "functional": [
+          "Botón 'Volver a Home' que redirige al dashboard principal.",
+          "Nombre del proyecto editable.",
+          "Botón 'Guardar' para guardar los cambios realizados en el formulario."
+        ],
+        "aceptation": [
+          "El nombre del proyecto se puede editar y guardar correctamente.",
+          "El botón 'Volver a Home' redirige al lugar correcto."
+        ]
+      },
+      {
+        "element_name": "Barra de Opciones",
+        "element_desc": "Contiene iconos para vista previa y expandir/contraer preguntas.",
+        "functional": [
+          "Icono 'Vista Previa' permite ver el formulario en modo de previsualización.",
+          "Botón para expandir o contraer todas las preguntas del formulario."
+        ],
+        "aceptation": [
+          "La vista previa muestra el formulario correctamente.",
+          "El botón de expandir/contraer funciona para todas las preguntas."
+        ]
+      },
+      {
+        "element_name": "Formulario Vacío",
+        "element_desc": "Estado inicial del formulario cuando no hay preguntas.",
+        "functional": [
+          "Muestra un mensaje indicando que el formulario está vacío.",
+          "Icono '+' para agregar nuevos componentes al formulario."
+        ],
+        "aceptation": [
+          "El mensaje se muestra correctamente cuando el formulario está vacío.",
+          "El botón '+' permite añadir componentes al formulario."
+        ]
+      },
+      {
+        "element_name": "Agregar Componente",
+        "element_desc": "Permite agregar un nuevo campo al formulario.",
+        "functional": [
+          "Al hacer clic en el botón '+', se abre un input para ingresar el nombre del campo.",
+          "El botón 'Agregar pregunta' permite desplegar un menú con los tipos de datos disponibles."
+        ],
+        "aceptation": [
+          "El input para el nombre del campo funciona correctamente.",
+          "El menú de tipos de datos se despliega y permite seleccionar el tipo de pregunta."
+        ]
+      },
+      {
+        "element_name": "Tipos de Datos Disponibles",
+        "element_desc": "Lista de tipos de datos que se pueden agregar al formulario.",
+        "functional": [
+          "Seleccionar uno",
+          "Seleccionar varios",
+          "Texto",
+          "Número",
+          "Decimal",
+          "Fecha",
+          "Fecha y Hora",
+          "Punto",
+          "Foto"
+        ],
+        "aceptation": [
+          "Cada tipo de dato puede ser seleccionado y agregado al formulario."
+        ]
+      },
+      {
+        "element_name": "Contenedores de Preguntas",
+        "element_desc": "Estructura para cada tipo de pregunta agregada al formulario.",
+        "functional": [
+          "Iconos de edición y eliminación en cada contenedor.",
+          "Capacidad de arrastrar y ordenar los contenedores de preguntas."
+        ],
+        "aceptation": [
+          "Los iconos de edición y eliminación funcionan correctamente.",
+          "El reordenamiento de los contenedores se realiza sin problemas."
+        ]
+      },
+      {
+        "element_name": "Contenedores - Tipo Seleccionar Uno/Seleccionar Varios",
+        "element_desc": "Contenedores específicos para preguntas de selección múltiple o única.",
+        "functional": [
+          "Cada contenedor tiene un icono del tipo de dato, etiqueta del campo, y sugerencia de pregunta.",
+          "Se generan dos opciones predeterminadas para las respuestas.",
+          "Botón para agregar más opciones de respuesta."
+        ],
+        "aceptation": [
+          "Las opciones predeterminadas y el botón de agregar funcionan como se espera."
+        ]
+      },
+      {
+        "element_name": "Contenedores - Tipo Texto/Número/Decimal/Fecha/Punto/Foto",
+        "element_desc": "Contenedores específicos para preguntas de tipo texto, número, y otros.",
+        "functional": [
+          "Cada contenedor tiene un icono del tipo de dato, etiqueta del campo, y sugerencia de pregunta."
+        ],
+        "aceptation": [
+          "El contenedor se genera correctamente con todos los elementos necesarios."
+        ]
+      }
+    ],
+    "description": "La sección Crear/Editar Formulario permite construir y organizar preguntas en un formulario mediante una interfaz visual, donde se pueden agregar, editar, eliminar y reorganizar campos. Además, ofrece herramientas para gestionar el nombre del proyecto y previsualizar el formulario antes de su implementación.",
+    "images": [
+      "../captures/24a_crearEditarFormulario.png",
+      "../captures/24b_crearEditarFormulario.png",
+      "../captures/24c_crearEditarFormulario.png",
+      "../captures/24d_crearEditarFormulario.png",
+      "../captures/24e_crearEditarFormulario.png",
+      "../captures/24f_crearEditarFormulario.png"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Usar Formulario",
+    "position": "Página para realizar envíos y visualizar el formulario",
+    "isCompleted": false,
+    "elements": [
+      {
+        "element_name": "Página Principal",
+        "element_desc": "Sección donde se visualiza el formulario y se realizan envíos.",
+        "functional": [
+          "El título del proyecto se muestra en la parte superior.",
+          "Se cuenta la cantidad de envíos realizados en la esquina de la página.",
+          "El botón 'Enviar' está presente al final del formulario.",
+          "Botón para imprimir la página."
+        ],
+        "aceptation": [
+          "El título del proyecto aparece correctamente.",
+          "La cantidad de envíos se cuenta y muestra correctamente.",
+          "El botón 'Enviar' funciona como se espera."
+        ]
+      },
+      {
+        "element_name": "Componente Seleccionar Solo Uno",
+        "element_desc": "Componente que permite seleccionar una única opción.",
+        "functional": [
+          "Se muestra el título del campo.",
+          "La descripción es opcional.",
+          "Cada opción es un RadioButton.",
+          "Cada opción tiene un valor sin espacios y en minúsculas."
+        ],
+        "aceptation": [
+          "Las opciones se muestran correctamente como RadioButtons y cumplen con las condiciones especificadas."
+        ]
+      },
+      {
+        "element_name": "Componente Texto",
+        "element_desc": "Componente de entrada de texto.",
+        "functional": [
+          "Se muestra el título del campo.",
+          "La descripción es opcional.",
+          "Input de texto para ingresar el valor."
+        ],
+        "aceptation": [
+          "El input de texto funciona correctamente y muestra la información necesaria."
+        ]
+      },
+      {
+        "element_name": "Componente Número/Decimal",
+        "element_desc": "Componente de entrada numérica.",
+        "functional": [
+          "Se muestra el título del campo.",
+          "La descripción es opcional.",
+          "Input Number para ingresar valores numéricos."
+        ],
+        "aceptation": [
+          "El input numérico funciona correctamente y acepta los valores apropiados."
+        ]
+      },
+      {
+        "element_name": "Componente Fecha",
+        "element_desc": "Componente de selección de fecha.",
+        "functional": [
+          "Se muestra el título del campo.",
+          "La descripción es opcional.",
+          "Input Date para seleccionar una fecha desde un calendario.",
+          "Botón para restaurar valores por defecto."
+        ],
+        "aceptation": [
+          "El input de fecha funciona correctamente y el botón de restaurar valores reinicia el campo."
+        ]
+      },
+      {
+        "element_name": "Componente Hora",
+        "element_desc": "Componente de selección de hora.",
+        "functional": [
+          "Se muestra el título del campo.",
+          "La descripción es opcional.",
+          "Input Time para seleccionar una hora desde un selector.",
+          "Botón para restaurar valores por defecto."
+        ],
+        "aceptation": [
+          "El input de hora funciona correctamente y el botón de restaurar valores reinicia el campo."
+        ]
+      },
+      {
+        "element_name": "Componente Día y Hora",
+        "element_desc": "Combinación de componentes Fecha y Hora.",
+        "functional": [
+          "Se muestra el título del campo.",
+          "La descripción es opcional.",
+          "Input DateTime para seleccionar una fecha y hora.",
+          "Botón para restaurar valores por defecto."
+        ],
+        "aceptation": [
+          "El input de fecha y hora funciona correctamente y el botón de restaurar valores reinicia el campo."
+        ]
+      },
+      {
+        "element_name": "Componente Imagen",
+        "element_desc": "Componente para subir imágenes.",
+        "functional": [
+          "Se muestra el título del campo.",
+          "La descripción es opcional.",
+          "Input File para subir imágenes (accept 'image/*').",
+          "Botón para restaurar valores por defecto."
+        ],
+        "aceptation": [
+          "El input de archivo permite subir imágenes correctamente y el botón de restaurar valores reinicia el campo."
+        ]
+      },
+      {
+        "element_name": "Componente Punto",
+        "element_desc": "Componente para ingresar coordenadas geográficas.",
+        "functional": [
+          "Se muestra el título del campo.",
+          "La descripción es opcional.",
+          "Input para latitud y longitud.",
+          "Buscador de lugares o direcciones.",
+          "Botón para detectar la ubicación actual del usuario.",
+          "Mapa de OpenStreetMap para visualizar la ubicación.",
+          "Campos para ingresar altitud y precisión.",
+          "Botón para restaurar valores por defecto."
+        ],
+        "aceptation": [
+          "El componente permite ingresar y visualizar coordenadas correctamente, y el botón de restaurar valores reinicia el campo."
+        ]
+      },
+      {
+        "element_name": "Componente Seleccionar Varios",
+        "element_desc": "Componente que permite seleccionar múltiples opciones.",
+        "functional": [
+          "Se muestra el título del campo.",
+          "La descripción es opcional.",
+          "Checkbox para seleccionar varias opciones."
+        ],
+        "aceptation": [
+          "Los checkboxes permiten seleccionar múltiples opciones como se espera."
+        ]
+      }
+    ],
+    "description": "La sección 'Usar Formulario' permite a los usuarios realizar envíos al formulario mediante diferentes componentes de entrada como selección, texto, números, fechas, horas, imágenes, y coordenadas geográficas. Además, ofrece opciones para imprimir el formulario y restaurar valores en los campos.",
+    "images": [
+      "../captures/25a_usarFormulario.png",
+      "../captures/25b_usarFormulario.png",
+      "../captures/25c_usarFormulario.png",
+      "../captures/25d_usarFormulario.png",
+      "../captures/25e_usarFormulario.png",
+      "../captures/25f_usarFormulario.png",
+      "../captures/25g_usarFormulario.png",
+      "../captures/25h_usarFormulario.png",
+      "../captures/25i_usarFormulario.png",
+      "../captures/25j_usarFormulario.png",
+      "../captures/25k_usarFormulario.png"
+    ]
+  }
+]
