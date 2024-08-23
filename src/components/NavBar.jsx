@@ -2,7 +2,7 @@ import "../styles/NavBar.css";
 import MenuSection from "./MenuSection";
 import LogoDark from "../assets/react.svg";
 
-function Navbar() {
+function NavBar() {
   return (
     <div
       className={`navbar-container has-background-dark`}
@@ -17,4 +17,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;
