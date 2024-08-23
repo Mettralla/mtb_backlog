@@ -3,7 +3,6 @@ import MenuSection from "./MenuSection";
 import LogoDark from "../assets/react.svg";
 
 function Navbar() {
-
   return (
     <div
       className={`navbar-container has-background-dark`}

@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import "../styles/WebBody.css";
-import Navbar from "../components/Navbar.jsx";
-import SearchBar from "../components/SearchBar.jsx";
+// import Navbar from "../components/Navbar.jsx";
+import Navbar from "src/components/Navbar.jsx";
+import SearchBar from "src/components/SearchBar.jsx";
 
 function Layout() {
   return (
